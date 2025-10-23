@@ -1,0 +1,304 @@
+/* Styling for the ClinicFlow site */
+
+button:hover
+{
+    cursor: pointer;
+}
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navigation_bar
+{
+    display: flex;
+    font-family: "Rubik", sans-serif;
+    color: black;
+}
+
+#logo a img
+{
+    height: 100px;
+    width: 100px;
+}
+
+#nav_buttons
+{
+    display: flex;
+}
+
+#navigation ul
+{
+    list-style: none;
+}
+
+#navigation ul li a
+{
+    text-decoration: none;
+}
+
+#navigation li
+{
+    padding: 0px 80px 0px 90px;
+}
+
+#navigation
+{
+    margin-left: 196px;
+    margin-top: 36px;
+}
+
+#timings_and_contact 
+{
+    display: flex;
+    font-family: "Rubik", sans-serif;
+    justify-content: center;
+    font-size: 1.38rem;
+}
+
+#timings, #contact
+{
+    padding: 0px 19px 0px 88px;
+}
+
+#dashboard
+{
+    display: flex;
+    margin: 60px;
+}
+
+#more
+{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dash_buttons
+{
+    margin-top:30px;
+}
+
+.dash_content
+{
+    margin-bottom: 30px;
+}
+
+.dash_content #name
+{
+    font-family: "Oswald", sans-serif;
+    font-size: 88px;
+    font-weight: 700;
+}
+
+.dash_content #tagline
+{
+    font-family: monospace;
+    font-weight: lighter;
+    font-size: 25px;
+    letter-spacing: 8px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.dash_buttons
+{
+    display: flex;
+    justify-content: center;
+}
+
+.dash_buttons button
+{
+    margin: 0px 100px 0px 26px;
+    width: 150px;
+    height: 52px;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.dash_buttons #appointment
+{
+    background: none;
+}
+
+#services h2
+{
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-size: 3.3rem;
+    letter-spacing: 5px;
+}
+
+.cards_and_button_holder
+{
+    margin: 50px;
+    box-shadow: 9px 13px 19px 3px black;
+}
+
+.cards
+{
+    display: flex;
+}
+
+#service1, #service2, #service3
+{
+    width: 297px;
+    height: auto;
+    padding: 40px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+#service1 p, #service2 p, #service3 p
+{
+    padding-top: 30px;
+    font-size: 1.3rem;
+}
+
+#service1 h3, #service2 h3, #service3 h3
+{
+    font-size: 1.7rem;
+}
+
+#service1 img
+{
+    margin-bottom: 10px;
+    height: max-content;
+    width: 258px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+#service2 img
+{
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 217px;
+    height: max-content;
+}
+
+#service3 img
+{
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 221px;
+    height: max-content;
+}
+
+.cards_and_button_holder button
+{
+    width: 122px;
+    margin-bottom: 18px;
+    height: 50px;
+    border: 2px solid black;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+.cards_and_button_holder
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#reviews h2
+{
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-size: 3.3rem;
+    letter-spacing: 5px;
+    margin-top: 120px;
+    margin-bottom: -76px;
+}
+
+.review
+{
+    display: flex;
+    margin: 154px;
+    box-shadow: 9px 13px 19px 3px black;
+    height: 500px;
+    padding: 50px;
+}
+
+#review2, #review3
+{
+    display: none;
+}
+
+#review1 .user
+{
+    display: flex;
+    flex-direction: column;    
+}
+
+.review .user img
+{
+    border-radius: 500px;
+    border: 2px solid black;
+}
+
+.review .user .name
+{
+    margin-top: 41px;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.7rem;
+}
+
+.review .user .location
+{
+    font-family: monospace;
+    font-style: italic;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+
+.about
+{
+    margin-left: 108px;
+}
+
+.about .stars
+{
+    font-size: 3em;
+}
+
+.about .comment
+{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.6rem;
+}
+
+.about .quote
+{
+    font-family: "News Cycle", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 7rem;
+}
+
+.about .quote#startq
+{
+    transform: scaleX(-1);
+    place-self: flex-start;
+}
+
+.about .quote#endq
+{
+    place-self: flex-end;
+}

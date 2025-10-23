@@ -1,0 +1,4 @@
+# Ignoring files to avoid pushing to github
+
+# Dependency directory
+node_modules/
