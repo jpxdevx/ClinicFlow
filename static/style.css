@@ -47,7 +47,7 @@ button:hover
 #navigation
 {
     margin-left: 196px;
-    margin-top: 36px;
+    margin-top: 41px;
 }
 
 #timings_and_contact 
@@ -67,11 +67,12 @@ button:hover
 {
     display: flex;
     margin: 60px;
+    margin-left: 0px;
 }
 
 #more
 {
-    margin-left: 30px;
+    margin-left: 105px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,11 +81,13 @@ button:hover
 .dash_buttons
 {
     margin-top:30px;
+    margin-left: -73px;
 }
 
 .dash_content
 {
     margin-bottom: 30px;
+    margin-left: 20px;
 }
 
 .dash_content #name
@@ -99,7 +102,7 @@ button:hover
     font-family: monospace;
     font-weight: lighter;
     font-size: 25px;
-    letter-spacing: 8px;
+    letter-spacing: -0.5px;
     font-style: italic;
     margin-top: 10px;
 }
@@ -125,14 +128,6 @@ button:hover
 .dash_buttons #appointment
 {
     background: none;
-}
-
-#services h2
-{
-    text-align: center;
-    font-family: "Rubik", sans-serif;
-    font-size: 3.3rem;
-    letter-spacing: 5px;
 }
 
 .cards_and_button_holder
@@ -214,12 +209,16 @@ button:hover
     align-items: center;
 }
 
-#reviews h2
+.section_heading
 {
     text-align: center;
     font-family: "Rubik", sans-serif;
     font-size: 3.3rem;
     letter-spacing: 5px;
+}
+
+#reviews h2
+{
     margin-top: 120px;
     margin-bottom: -76px;
 }
@@ -227,7 +226,7 @@ button:hover
 .review
 {
     display: flex;
-    margin: 154px;
+    margin: 154px 30px;
     box-shadow: 9px 13px 19px 3px black;
     height: 500px;
     padding: 50px;
@@ -248,6 +247,8 @@ button:hover
 {
     border-radius: 500px;
     border: 2px solid black;
+    height: 200px;
+    width: 200px;
 }
 
 .review .user .name
@@ -301,4 +302,133 @@ button:hover
 .about .quote#endq
 {
     place-self: flex-end;
+}
+
+.review_cards
+{
+    display: flex;
+}
+
+.reviewButton
+{
+    height: 61px;
+    width: 140px;
+    border: 2px solid black;
+    border-radius: 100px;
+    margin: auto 20px;
+}
+
+#previous_review
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2px;
+}
+
+#next_review
+{
+    width: 142px;
+}
+
+#ReachOut .section_heading
+{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#map
+{
+    margin: 40px;
+    border: 2px solid black;
+}
+
+#map iframe
+{
+    width: 100%;
+}
+
+footer
+{
+    background-color: beige;
+    margin-top: 100px;
+}
+
+#Connect
+{
+    padding-top: 90px;
+}
+
+#footer_connectMessage
+{
+    text-align: center;
+    font-size: 1.5rem;
+    opacity: 30%;
+    font-family: monospace;
+}
+
+#socialIcons
+{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    align-items: center;
+}
+
+#socialIcons a img
+{
+    height: 54px;
+    width: auto;
+    border-radius: 100px;
+}
+
+#socialIcons a #X_icon
+{
+    height: 38px;
+}
+
+#socialIcons a
+{
+    padding: 0px 38px;
+}
+
+#socialIcons a:hover
+{
+    cursor: default;
+    pointer-events: none;
+}
+
+#socialIcons a img:hover
+{
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#copyright
+{
+    padding-top: 90px;
+    opacity: 60%;
+    text-align: center;
+}
+
+.serviceCard
+{
+    transition: transform 0.4s ease-in-out;
+    background-color: white;
+}
+
+.serviceCard:hover
+{
+    transform: scale(1.2);
+}
+
+.review
+{
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.review.fade-out
+{
+    opacity: 0;
 }
