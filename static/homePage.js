@@ -4,35 +4,62 @@ let reviews = [['../static/Users/User1.jpeg', "Jovito Noronha", "Margao, Goa", '
 
 ['../static/Users/User3.jpg', "Melina Pinto", "Panjim, Goa", '★★★★☆', '"Very professional and friendly. The treatment worked well, and I appreciated the follow-up care. Booking an appointment was also very easy through the website."']];
 
-let i = 0, j = 0;
-
-
-
+let i = 0, j = 0, interval;
 
 document.addEventListener('DOMContentLoaded', () => 
 {
     let img = document.getElementById('u_logo');
-
     let holder = document.getElementById('review1');
-    holder.classList.add('fade-out');
     
-
-    setInterval(() =>
+    function updateReviews(index)
     {
-        let review = reviews[i];
-        j = 0;
+        holder.style.opacity = '0';
 
-        img.src = reviews[i][j++];
-        document.getElementById('u_name').textContent = review[j++];
-        document.getElementById('u_location').textContent = review[j++];
-        document.getElementById('u_stars').textContent = review[j++];
-        document.getElementById('u_comment').textContent = review[j];
+        setTimeout(() => 
+        {
+            let review = reviews[index];
+            j = 0;
 
-        i++;
+            img.src = review[j++];
+            document.getElementById('u_name').textContent = review[j++];
+            document.getElementById('u_location').textContent = review[j++];
+            document.getElementById('u_stars').textContent = review[j++];
+            document.getElementById('u_comment').textContent = review[j];
 
-        if(i >= reviews.length)
-            i = 0;
+            holder.style.opacity = '1';
+        }, 500);
+    }
 
-        holder.classList.remove('fade-out');
-    }, 5000);
+    updateReviews(i);
+
+    function updateInd()
+    {
+        i = (i + 1) % reviews.length;
+
+        updateReviews(i);
+    }
+
+    interval = setInterval(updateInd, 8000);
+
+    // Left button review logic
+    document.getElementById("previous_review").addEventListener('click', () =>
+    {
+        i = (i - 1 +reviews.length) % reviews.length;
+
+        clearInterval(interval);
+        updateReviews(i);
+
+        interval = setInterval(updateInd, 8000);
+    });
+
+    // Right button review logic
+    document.getElementById("next_review").addEventListener('click', () =>
+    {
+        i = (i + 1) % reviews.length;
+
+        clearInterval(interval);
+        updateReviews(i);
+
+        interval = setInterval(updateInd, 8000);
+    })
 });

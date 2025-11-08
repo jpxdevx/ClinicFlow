@@ -1,21 +1,53 @@
 /* Styling for the ClinicFlow site */
 
+button
+{
+    background-color: var(--secondary);
+    color: var(--primary);
+    transition: all 0.3s ease-in-out;
+}
+
 button:hover
 {
     cursor: pointer;
+    background-color: #0289b6;
+}
+
+button:active
+{
+    background-color: #00171F;
+}
+
+a:active
+{
+    color: 00171F;
 }
 
 *
 {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --background: #FFFFFF;
+    --primary: #00171F;
+    --secondary: #00A7E1;
+    --secondaryTxt: #003459;
+    --text: #000000;
+}
+
+body
+{
+    background-color: var(--background);
 }
 
 .navigation_bar
 {
     display: flex;
     font-family: "Rubik", sans-serif;
-    color: black;
 }
 
 #logo a img
@@ -37,6 +69,14 @@ button:hover
 #navigation ul li a
 {
     text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+#navigation ul li a:hover
+{
+    color: var(--secondary);
 }
 
 #navigation li
@@ -56,6 +96,8 @@ button:hover
     font-family: "Rubik", sans-serif;
     justify-content: center;
     font-size: 1.38rem;
+    background-color: var(--secondary);
+    color: var(--primary);
 }
 
 #timings, #contact
@@ -95,6 +137,7 @@ button:hover
     font-family: "Oswald", sans-serif;
     font-size: 88px;
     font-weight: 700;
+    color: var(--primary);
 }
 
 .dash_content #tagline
@@ -105,6 +148,7 @@ button:hover
     letter-spacing: -0.5px;
     font-style: italic;
     margin-top: 10px;
+    color: var(--secondaryTxt);
 }
 
 .dash_buttons
@@ -125,15 +169,11 @@ button:hover
     border-radius: 10px;
 }
 
-.dash_buttons #appointment
+.dash_buttons #LearnMore
 {
     background: none;
-}
-
-.cards_and_button_holder
-{
-    margin: 50px;
-    box-shadow: 9px 13px 19px 3px black;
+    border: 2px solid var(--primary);
+    color: var(--primary);
 }
 
 .cards
@@ -165,7 +205,7 @@ button:hover
 
 #service1 img
 {
-    margin-bottom: 10px;
+    margin: 0px 0px 10px -20px;
     height: max-content;
     width: 258px;
     border: 2px solid black;
@@ -200,6 +240,7 @@ button:hover
     font-size: 20px;
     font-weight: bold;
     border-radius: 12px;
+    margin: 50px;
 }
 
 .cards_and_button_holder
@@ -215,6 +256,7 @@ button:hover
     font-family: "Rubik", sans-serif;
     font-size: 3.3rem;
     letter-spacing: 5px;
+    color: var(--primary);
 }
 
 #reviews h2
@@ -228,8 +270,12 @@ button:hover
     display: flex;
     margin: 154px 30px;
     box-shadow: 9px 13px 19px 3px black;
-    height: 500px;
+    height: 580px;
+    width: 2000px;
     padding: 50px;
+    transition: opacity 0.5s ease-in-out;
+    background-color: var(--secondary);
+    border-radius: 20px;
 }
 
 #review2, #review3
@@ -272,6 +318,7 @@ button:hover
 .about
 {
     margin-left: 108px;
+    position: relative;
 }
 
 .about .stars
@@ -301,7 +348,12 @@ button:hover
 
 .about .quote#endq
 {
-    place-self: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 7rem;
+    top: 390px;
 }
 
 .review_cards
@@ -341,17 +393,20 @@ button:hover
 {
     margin: 40px;
     border: 2px solid black;
+    border-radius: 50px;
 }
 
 #map iframe
 {
     width: 100%;
+    border-radius: 50px;
 }
 
 footer
 {
-    background-color: beige;
+    background-color: var(--secondary);
     margin-top: 100px;
+    color: var(--primary);
 }
 
 #Connect
@@ -363,7 +418,6 @@ footer
 {
     text-align: center;
     font-size: 1.5rem;
-    opacity: 30%;
     font-family: monospace;
 }
 
@@ -407,28 +461,16 @@ footer
 #copyright
 {
     padding-top: 90px;
-    opacity: 60%;
     text-align: center;
 }
 
 .serviceCard
 {
-    transition: transform 0.4s ease-in-out;
-    background-color: white;
+    transition: transform 0.2s ease-in-out;
+    background-color: var(--secondary);
 }
 
 .serviceCard:hover
 {
-    transform: scale(1.2);
-}
-
-.review
-{
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.review.fade-out
-{
-    opacity: 0;
+    transform: scale(1.1);
 }
