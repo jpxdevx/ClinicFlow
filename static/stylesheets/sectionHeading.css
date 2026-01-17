@@ -1,0 +1,24 @@
+/* CSS styling for section headers */
+
+:root
+{
+    --background: #FFFFFF;
+    --primary: #00171F;
+    --secondary: #00A7E1;
+    --secondaryTxt: #003459;
+    --text: #000000;
+}
+
+section
+{
+    margin-top: 35px;
+}
+
+.section_heading
+{
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-size: 3.3rem;
+    letter-spacing: 5px;
+    color: var(--primary);
+}

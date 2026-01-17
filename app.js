@@ -3,6 +3,7 @@
 // Modules import
 const express = require('express');
 const path = require('path');
+const services = require('./static/Scripts/Services.js');
 
 // Initialization
 const app = express();
@@ -20,11 +21,22 @@ app.set('views', path.join(__dirname, '/views'));
 // homepage
 app.get('/', (req, res) =>
 {
-    res.status(200).render('index.pug');
+    res.status(200).render('index.pug', {serviceCards: services});
+});
+
+// Services
+app.get('/services', (req, res) =>
+{
+    res.status(200).render('services.pug', {serviceCards: services});
+});
+
+app.get('/appointment', (req, res) =>
+{
+    res.status(200).render('appointment.pug');
 })
 
 // Server
 app.listen(port, () => 
 {
     console.log(`The website is launched successfully and is lstening to port ${port}`);
-})
+});

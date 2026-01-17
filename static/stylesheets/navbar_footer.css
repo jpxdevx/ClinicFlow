@@ -1,0 +1,154 @@
+/* Styling for the ClinicFlow site */
+
+button
+{
+    background-color: var(--secondary);
+    color: var(--primary);
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover
+{
+    cursor: pointer;
+    background-color: #0289b6;
+}
+
+button:active
+{
+    background-color: #00171F;
+}
+
+a:active
+{
+    color: 00171F;
+}
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --background: #FFFFFF;
+    --primary: #00171F;
+    --secondary: #00A7E1;
+    --secondaryTxt: #003459;
+    --text: #000000;
+}
+
+body
+{
+    background-color: var(--background);
+}
+
+.navigation_bar
+{
+    display: flex;
+    font-family: "Rubik", sans-serif;
+    box-shadow: 2px 0px 15px -6px black;
+}
+
+#logo a img
+{
+    height: 100px;
+    width: 100px;
+}
+
+#nav_buttons
+{
+    display: flex;
+}
+
+#navigation ul
+{
+    list-style: none;
+}
+
+#navigation ul li a
+{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+#navigation ul li a:hover
+{
+    color: var(--secondary);
+}
+
+#navigation li
+{
+    padding: 0px 80px 0px 90px;
+}
+
+#navigation
+{
+    margin-left: 196px;
+    margin-top: 41px;
+}
+
+footer
+{
+    background-color: var(--secondary);
+    margin-top: 100px;
+    color: var(--primary);
+}
+
+#Connect
+{
+    padding-top: 90px;
+}
+
+#footer_connectMessage
+{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+
+#socialIcons
+{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    align-items: center;
+}
+
+#socialIcons a img
+{
+    height: 54px;
+    width: auto;
+    border-radius: 100px;
+}
+
+#socialIcons a #X_icon
+{
+    height: 38px;
+}
+
+#socialIcons a
+{
+    padding: 0px 38px;
+}
+
+#socialIcons a:hover
+{
+    cursor: default;
+    pointer-events: none;
+}
+
+#socialIcons a img:hover
+{
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#copyright
+{
+    padding-top: 90px;
+    text-align: center;
+}

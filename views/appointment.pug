@@ -1,0 +1,47 @@
+extends base.pug
+
+block title 
+    | ClinicFlow | Appointment Booking
+
+append styles 
+    link(rel="stylesheet", href="../static/stylesheets/sectionHeading.css")
+    link(rel="stylesheet", href="../static/stylesheets/appointment.css")
+
+append scripts
+    script(src="../static/Scripts/appointment.js" defer) 
+
+block content 
+    section 
+        h2.section_heading Appointment Booking
+
+        form#appointment_form(method="POST", action="/submit-appointment") 
+            label(for="name") Name: 
+            span *
+            input(type="text", id="name", placeholder="Enter you name" required)
+
+            label(for="email") Email address: 
+            span *
+            input(type="email", id="email", placeholder="Enter your email" required)
+
+            label(for="phone") Phone No: 
+            span *
+            input(type="phone", id="phone", placeholder="Enter your phone no" required)
+
+            label(for="age") Age: 
+            span *
+            input(type="number", id="age", placeholder="Enter your age" required)
+
+            label(for="date") Preffered date: 
+            span *
+            input(type="date", id="date" required)
+
+            label(for="timing") Preferred time:
+            span *
+            select(id="timing" required) 
+                option(value="" selected disabled) ---Select an option---
+                option(value="morning") Morning
+                option(value="evening") Evening
+
+            button(type="submit") Submit
+
+        #error-message

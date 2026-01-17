@@ -1,0 +1,471 @@
+/* Styling for the ClinicFlow site */
+
+button
+{
+    background-color: var(--secondary);
+    color: var(--primary);
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover
+{
+    cursor: pointer;
+    background-color: #0289b6;
+}
+
+button:active
+{
+    background-color: #00171F;
+}
+
+a:active
+{
+    color: 00171F;
+}
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --background: #FFFFFF;
+    --primary: #00171F;
+    --secondary: #00A7E1;
+    --secondaryTxt: #003459;
+    --text: #000000;
+}
+
+body
+{
+    background-color: var(--background);
+}
+
+.navigation_bar
+{
+    display: flex;
+    font-family: "Rubik", sans-serif;
+}
+
+#logo a img
+{
+    height: 100px;
+    width: 100px;
+}
+
+#nav_buttons
+{
+    display: flex;
+}
+
+#navigation ul
+{
+    list-style: none;
+}
+
+#navigation ul li a
+{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+#navigation ul li a:hover
+{
+    color: var(--secondary);
+}
+
+#navigation li
+{
+    padding: 0px 80px 0px 90px;
+}
+
+#navigation
+{
+    margin-left: 196px;
+    margin-top: 41px;
+}
+
+#timings_and_contact 
+{
+    display: flex;
+    font-family: "Rubik", sans-serif;
+    justify-content: center;
+    font-size: 1.38rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+#timings, #contact
+{
+    padding: 0px 19px 0px 88px;
+}
+
+#dashboard
+{
+    display: flex;
+    margin: 60px;
+    margin-left: 0px;
+}
+
+#more
+{
+    margin-left: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dash_buttons
+{
+    margin-top:30px;
+    margin-left: -73px;
+}
+
+.dash_content
+{
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.dash_content #name
+{
+    font-family: "Oswald", sans-serif;
+    font-size: 88px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.dash_content #tagline
+{
+    font-family: monospace;
+    font-weight: lighter;
+    font-size: 25px;
+    letter-spacing: -0.5px;
+    font-style: italic;
+    margin-top: 10px;
+    color: var(--secondaryTxt);
+}
+
+.dash_buttons
+{
+    display: flex;
+    justify-content: center;
+}
+
+.dash_buttons button
+{
+    margin: 0px 100px 0px 26px;
+    width: 150px;
+    height: 52px;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.dash_buttons #LearnMore
+{
+    background: none;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.cards
+{
+    display: flex;
+    margin-top: 35px;
+}
+
+.serviceCard
+{
+    width: 297px;
+    height: 500px;
+    padding: 40px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 20px;
+    transition: transform 0.2s ease-in-out;
+    background-color: var(--secondary);
+    position: relative;
+}
+
+.serviceCard p
+{
+    padding-top: 0px;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 0px;
+    margin: 0px 21px;
+    top: 20rem;
+}
+
+.serviceCard h3
+{
+    font-size: 1.7rem;
+}
+
+.serviceCard img
+{
+    margin: 0px 0px 10px -20px;
+    height: 177px;
+    width: 258px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.serviceCard:hover
+{
+    transform: scale(1.1);
+}
+
+.cards_and_button_holder button
+{
+    width: 122px;
+    margin-bottom: 18px;
+    height: 50px;
+    border: 2px solid black;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    margin: 50px;
+}
+
+.cards_and_button_holder
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section_heading
+{
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-size: 3.3rem;
+    letter-spacing: 5px;
+    color: var(--primary);
+}
+
+#reviews h2
+{
+    margin-top: 120px;
+    margin-bottom: -76px;
+}
+
+.review
+{
+    display: flex;
+    margin: 154px 30px;
+    box-shadow: 9px 13px 19px 3px black;
+    height: 580px;
+    width: 2000px;
+    padding: 50px;
+    transition: opacity 0.5s ease-in-out;
+    background-color: var(--secondary);
+    border-radius: 20px;
+}
+
+#review2, #review3
+{
+    display: none;
+}
+
+#review1 .user
+{
+    display: flex;
+    flex-direction: column;    
+}
+
+.review .user img
+{
+    border-radius: 500px;
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+}
+
+.review .user .name
+{
+    margin-top: 41px;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.7rem;
+}
+
+.review .user .location
+{
+    font-family: monospace;
+    font-style: italic;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+
+.about
+{
+    margin-left: 108px;
+    position: relative;
+}
+
+.about .stars
+{
+    font-size: 3em;
+}
+
+.about .comment
+{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.6rem;
+}
+
+.about .quote
+{
+    font-family: "News Cycle", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 7rem;
+}
+
+.about .quote#startq
+{
+    transform: scaleX(-1);
+    place-self: flex-start;
+}
+
+.about .quote#endq
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 7rem;
+    top: 390px;
+}
+
+.review_cards
+{
+    display: flex;
+}
+
+.reviewButton
+{
+    height: 61px;
+    width: 140px;
+    border: 2px solid black;
+    border-radius: 100px;
+    margin: auto 20px;
+}
+
+#previous_review
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2px;
+}
+
+#next_review
+{
+    width: 142px;
+}
+
+#ReachOut .section_heading
+{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#map
+{
+    margin: 40px;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+#map iframe
+{
+    width: 100%;
+    border-radius: 50px;
+}
+
+footer
+{
+    background-color: var(--secondary);
+    margin-top: 100px;
+    color: var(--primary);
+}
+
+#Connect
+{
+    padding-top: 90px;
+}
+
+#footer_connectMessage
+{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+
+#socialIcons
+{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    align-items: center;
+}
+
+#socialIcons a img
+{
+    height: 54px;
+    width: auto;
+    border-radius: 100px;
+}
+
+#socialIcons a #X_icon
+{
+    height: 38px;
+}
+
+#socialIcons a
+{
+    padding: 0px 38px;
+}
+
+#socialIcons a:hover
+{
+    cursor: default;
+    pointer-events: none;
+}
+
+#socialIcons a img:hover
+{
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#copyright
+{
+    padding-top: 90px;
+    text-align: center;
+}
+
+.serviceCard
+{
+    transition: transform 0.2s ease-in-out;
+    background-color: var(--secondary);
+}
+
+.serviceCard:hover
+{
+    transform: scale(1.1);
+}

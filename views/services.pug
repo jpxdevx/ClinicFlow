@@ -1,0 +1,19 @@
+extends base.pug
+
+block title 
+    | ClinicFlow | Services
+
+append styles 
+    link(rel="stylesheet", href="../static/stylesheets/services.css")
+    link(rel="stylesheet", href="../static/stylesheets/sectionHeading.css")
+
+block content 
+    section#services-holder
+        h2.section_heading Services
+
+        .cards
+            each card in serviceCards
+                .serviceCard
+                    img(src=card.img, alt="")
+                    h3.headings #{card.heading}
+                    p.discription #{card.discription}

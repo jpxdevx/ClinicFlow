@@ -2,12 +2,17 @@
 
 html
     head
-        title ClinicFlow
-        link(rel="stylesheet", href="../static/style.css")
+        title ClinicFlow | Home
+
+        link(rel="stylesheet", href="../static/stylesheets/home.css")
+
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200")
-        script(src="../static/homePage.js")
+
+        link(rel="icon", href="../static/Logo.png")
+
+        script(src="../static/Scripts/homePage.js")
     
     body
         nav.navigation_bar
@@ -19,7 +24,7 @@ html
                 ul#nav_buttons
                     li #[a(href='/') Home]
                     li #[a(href='/') Know Your Doctor]
-                    li #[a(href='/') Appointment]
+                    li #[a(href='/appointment') Appointment]
                     li #[a(href='/') Contact]
 
         section.time_and_contact_info 
@@ -41,29 +46,23 @@ html
 
                 .dash_buttons 
                     button#LearnMore Learn More 
-                    button#appointment Book an Appointment 
+                    
+                    a(href="/appointment") 
+                        button#appointment Book an Appointment 
             
         section#services 
             h2.section_heading Services
 
             .cards_and_button_holder 
                 .cards
-                    #service1.serviceCard
-                        img(src="../static/Services/Service1.jpeg", alt="Health checkup image")
-                        h3.headings General Health Checkups
-                        p.discription Comprehensive routine checkups to monitor your overall health and detect issues early. Ideal for maintaining long-term wellness.
+                    each card in serviceCards.slice(0, 3)
+                        .serviceCard
+                            img(src=card.img, alt=card.heading)
+                            h3.heading #{card.heading}
+                            p.discription #{card.discription}
 
-                    #service2.serviceCard
-                        img(src="../static/Services/Service2.jpg", alt="Fever and Infection Image")
-                        h3.headings Fever and Infection Treatment
-                        p.discription Quick diagnosis and treatment of fevers, viral infections, and bacterial illnesses to get you back on your feet faster.
-
-                    #service3.serviceCard
-                        img(src="../static/Services/Service3.jpeg", alt="Diabetes Management")
-                        h3.headings Diabetes Management
-                        p.discription Personalized care plans, sugar level monitoring, and lifestyle guidance to help manage diabetes effectively and safely.
-
-                button#SeeMore See More
+                a(href="/services")
+                    button#SeeMore See More
 
         section#reviews 
             h2.section_heading Reviews 

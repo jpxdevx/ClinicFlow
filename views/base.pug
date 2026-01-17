@@ -1,0 +1,48 @@
+html
+  head
+    title 
+        block title 
+        
+    block scripts
+
+    block styles
+        link(rel="icon", href="../static/Logo.png")
+
+        link(rel="stylesheet", href="../static/stylesheets/navbar_footer.css")
+
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet")
+
+  body
+    block navbar
+        nav.navigation_bar
+            #logo 
+                a(href='/')
+                    img(src="../static/Logo.png", alt="ClinicFlow Logo")
+            
+            #navigation 
+                ul#nav_buttons
+                    li #[a(href='/') Home]
+                    li #[a(href='/') Know Your Doctor]
+                    li #[a(href='/appointment') Appointment]
+                    li #[a(href='/') Contact]
+
+    block content
+
+    block footer
+        footer
+            #Connect
+                h6#footer_connectMessage Connect To Us
+
+                #socialIcons
+                    a(href="https://wa.me/+919821453211", target='_blank') 
+                        img#WhatsApp_icon(src="../static/Reach/WhatsApp.png", alt="+91 9821453211")
+                    a(href="https://www.facebook.com/clinicflow_goa", target="_black")
+                        img#FaceBook_icon(src="../static/Reach/FaceBook.png", alt="https://www.facebook.com/clinicflow_goa")
+                    a(href="https://www.twitter.com/clinicflow_goa", target="_black")
+                        img#X_icon(src="../static/Reach/X.png", alt="https://www.twitter.com/clinicflow_goa")
+                    a(href="https://www.instagram.com/clinicflow_goa", target="_black")
+                        img#Instagram_icon(src="../static/Reach/Instagram.png", alt="https://www.instagram.com/clinicflow_goa")
+
+            #copyright 
+                h4 Dr Ryan D'Souza All Rights Reserved &copy 2025

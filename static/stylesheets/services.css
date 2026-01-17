@@ -1,0 +1,60 @@
+/* Styling for Services.pug */
+
+:root
+{
+    --background: #FFFFFF;
+    --primary: #00171F;
+    --secondary: #00A7E1;
+    --secondaryTxt: #003459;
+    --text: #000000;
+}
+
+.cards
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 35px;
+}
+
+.serviceCard
+{
+    width: 297px;
+    height: 500px;
+    padding: 40px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 20px;
+    transition: transform 0.2s ease-in-out;
+    background-color: var(--secondary);
+    position: relative;
+}
+
+.serviceCard p
+{
+    padding-top: 0px;
+    font-size: 1.3rem;
+    position: absolute;
+    left: 0px;
+    margin: 0px 21px;
+    top: 20rem;
+}
+
+.serviceCard h3
+{
+    font-size: 1.7rem;
+}
+
+.serviceCard img
+{
+    margin: 0px 0px 10px -20px;
+    height: 177px;
+    width: 258px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.serviceCard:hover
+{
+    transform: scale(1.1);
+}
