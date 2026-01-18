@@ -1,0 +1,14 @@
+extends base.pug
+
+append title 
+    |  Appointment 
+
+append styles 
+    link(rel="stylesheet", href="../static/stylesheets/success.css")
+
+block content 
+    section 
+        #message-holder 
+            img(src="../static/Others/Tick.png", alt="Success tick mark")
+            h3 Success!
+            p You will get a confirmation on your email: #[span#mail #{mail}]

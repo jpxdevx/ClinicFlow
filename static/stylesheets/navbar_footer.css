@@ -18,6 +18,12 @@ button:active
     background-color: #00171F;
 }
 
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
 a:active
 {
     color: 00171F;

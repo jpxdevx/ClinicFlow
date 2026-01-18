@@ -1,0 +1,36 @@
+extends base.pug
+
+append title 
+    |  Contact
+
+append styles 
+    link(rel="stylesheet", href="../static/stylesheets/sectionHeading.css")
+    link(rel="stylesheet", href="../static/stylesheets/contact.css")
+    link(rel="stylesheet", href="../static/stylesheets/map.css")
+
+block content 
+    section 
+        h2.section_heading Contact
+
+        #info 
+            a(href="https://wa.me/+919821453211", target='_blank', class="container", id="phone_container") 
+                span(class="material-symbols-outlined", id="call_logo") call
+                h4#ph.text +919821453211
+
+            a(href="https://www.x.com/clinicflow_goa", target="_black", class="container", id="x_container")
+                img.icon(src="../static/Reach/X.png", alt="X_icon", id="x_icon")
+                h4.text @clinicflow_goa
+
+            a(href="https://www.instagram.com/clinicflow_goa", target="_black", class="container")
+                img.icon(src="../static/Reach/Instagram.png", alt="Instagram_icon", id="insta_logo")
+                h4.text @clinicflow_goa
+
+            a(href="https://www.facebook.com/clinicflow_goa", target="_black", class="container")
+                img.icon(src="../static/Reach/FaceBook.png", alt="Facebook_icon", id="facebook_icon")
+                h4.text @clinicflow_goa
+
+    section#ReachOut 
+        h2.section_heading Come Right Away 
+
+        #map
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3848.623704771043!2d73.97692157455641!3d15.288303309871365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfb3d585aa4a71%3A0x9b9efb42dea084a6!2sDamodar%20Arcade%2C%20Cupangale%20Society%2C%20Madgaon%2C%20Goa%20403601!5e0!3m2!1sen!2sin!4v1752148250310!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")

@@ -1,0 +1,29 @@
+/* Styling for about.pug */
+
+section
+{
+    padding: 0px 20px;
+}
+
+.content h4
+{
+    font-family: "Roboto";
+    font-size: 22px;
+    font-weight: 500;
+}
+
+aside
+{
+    display: inline-block;
+}
+
+#info-holder
+{
+    display: flex;
+    flex-direction: row;
+}
+
+#information
+{
+    flex: 1;
+}

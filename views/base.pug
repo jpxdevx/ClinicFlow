@@ -2,30 +2,32 @@ html
   head
     title 
         block title 
+            | ClinicFlow |
         
     block scripts
 
     block styles
-        link(rel="icon", href="../static/Logo.png")
+        link(rel="icon", href="../static/Others/Logo.png")
 
         link(rel="stylesheet", href="../static/stylesheets/navbar_footer.css")
 
-        link(rel="preconnect" href="https://fonts.googleapis.com")
-        link(href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet")
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined")
 
   body
     block navbar
         nav.navigation_bar
             #logo 
                 a(href='/')
-                    img(src="../static/Logo.png", alt="ClinicFlow Logo")
+                    img(src="../static/Others/Logo.png", alt="ClinicFlow Logo")
             
             #navigation 
                 ul#nav_buttons
                     li #[a(href='/') Home]
-                    li #[a(href='/') Know Your Doctor]
+                    li #[a(href='/about') Know Your Doctor]
                     li #[a(href='/appointment') Appointment]
-                    li #[a(href='/') Contact]
+                    li #[a(href='/contact') Contact]
 
     block content
 

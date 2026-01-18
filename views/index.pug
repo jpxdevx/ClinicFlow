@@ -5,12 +5,13 @@ html
         title ClinicFlow | Home
 
         link(rel="stylesheet", href="../static/stylesheets/home.css")
+        link(rel="stylesheet", href="../static/stylesheets/map.css")
 
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200")
 
-        link(rel="icon", href="../static/Logo.png")
+        link(rel="icon", href="../static/Others/Logo.png")
 
         script(src="../static/Scripts/homePage.js")
     
@@ -18,14 +19,14 @@ html
         nav.navigation_bar
             #logo 
                 a(href='/')
-                    img(src="../static/Logo.png", alt="ClinicFlow Logo")
+                    img(src="../static/Others/Logo.png", alt="ClinicFlow Logo")
             
             #navigation 
                 ul#nav_buttons
                     li #[a(href='/') Home]
-                    li #[a(href='/') Know Your Doctor]
+                    li #[a(href='/about') Know Your Doctor]
                     li #[a(href='/appointment') Appointment]
-                    li #[a(href='/') Contact]
+                    li #[a(href='contact') Contact]
 
         section.time_and_contact_info 
              #timings_and_contact 
@@ -37,7 +38,7 @@ html
 
 
         section#dashboard 
-            img#doctor_img(src="../static/Doctor.png", alt="Dr Ryan D'Souza")
+            img#doctor_img(src="../static/Others/Doctor.png", alt="Dr Ryan D'Souza")
 
             #more
                 .dash_content  
@@ -45,7 +46,8 @@ html
                     h4#tagline Carrying Hands. Healing Hearts
 
                 .dash_buttons 
-                    button#LearnMore Learn More 
+                    a(href="/about") 
+                        button#LearnMore Learn More 
                     
                     a(href="/appointment") 
                         button#appointment Book an Appointment 

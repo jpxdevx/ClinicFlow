@@ -1,0 +1,46 @@
+extends base.pug
+
+append title 
+    |  About 
+
+append styles 
+    link(rel="stylesheet", href="../static/stylesheets/about.css")
+    link(rel="stylesheet", href="../static/stylesheets/sectionHeading.css")
+
+block content 
+    section 
+        h2.section_heading About The Doctor
+
+        #info-holder
+            aside 
+                img(src="../static/Others/Doctor_Full.png", alt="Dr Ryan DSouza")
+
+            #information
+                .content 
+                    h4 Name:
+                    p Dr. Ryan D'Souza
+
+                .content 
+                    h4 Address:
+                    p H.No 124, Near Fontainhas, Panjim, Goa 403001
+
+                .content 
+                    h4 Age:
+                    p 34
+
+                .content 
+                    h4 Education:
+                    
+                    #edu-content
+                        h5 Schooling: 
+                        p Sharada Mandir School, Miramar
+
+                        h5 High School: 
+                        p St. Xavier's College, Mapusa
+
+                        h5 Degree: 
+                        p MBBS (Goa Medical College, Bambolim)
+
+                .content 
+                    h4 Specialization:
+                    p General Medicine, Nursing, Ayurvedic Studies.

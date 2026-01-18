@@ -1,0 +1,96 @@
+/* Styling for contact.pug */
+
+:root
+{
+    --secondary: #00A7E1;
+}
+
+#info
+{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: row;
+    font-family: "Google Sans";
+    font-size: 30px;
+    width: 400px;
+    align-items: center;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.container img
+{
+    width: 200px;
+    height: 200px;
+}
+
+#insta_logo
+{
+    width: 144px;
+    height: 144px;
+    margin-left: -25px;
+}
+
+#x_icon
+{
+    width: 85px;
+    height: 85px;
+}
+
+#facebook_icon
+{
+    width: 204px;
+    height: 131px;
+    margin-left: -53px;
+}
+
+#call_logo
+{
+    font-size: 102px;
+}
+
+.text
+{
+    position: absolute;
+    right: 0px;
+    font-family: "Google Sans";
+    letter-spacing: 1px;
+}
+
+#ph
+{
+    right: 17px;
+}
+
+#phone_container
+{
+    margin-bottom: 30px;
+}
+
+#x_container
+{
+    margin-bottom: 25px;
+}
+
+#ReachOut
+{
+    margin-top: 100px;
+}
+
+.container:hover, #call_logo
+{
+    color: black;
+}
+
+.container:hover
+{
+    color: var(--secondary);
+}

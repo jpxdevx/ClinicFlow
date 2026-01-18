@@ -1,7 +1,7 @@
 extends base.pug
 
-block title 
-    | ClinicFlow | Appointment Booking
+append title 
+    |  Appointment Booking
 
 append styles 
     link(rel="stylesheet", href="../static/stylesheets/sectionHeading.css")
@@ -21,7 +21,7 @@ block content
 
             label(for="email") Email address: 
             span *
-            input(type="email", id="email", placeholder="Enter your email" required)
+            input(type="email", name="email", id="email", placeholder="Enter your email" required)
 
             label(for="phone") Phone No: 
             span *
