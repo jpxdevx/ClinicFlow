@@ -32,7 +32,7 @@ form.addEventListener('submit', function(event)
     if(name.length < 3 || !nameRegEx.test(name))
         error = true;
 
-    if(email.length < 4 || !email.endsWith('.com'))
+    if(email.length < 4 || (!email.endsWith('.com') && !email.endsWith('.in')))
         error = true;
 
     if(!phoneRegEx.test(phone))
@@ -51,3 +51,9 @@ form.addEventListener('submit', function(event)
         event.preventDefault();
     }
 });
+
+window.addEventListener('pageshow', function(event)
+{
+    if(event.persisted)
+        window.location.reload();
+})

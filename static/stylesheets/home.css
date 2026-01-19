@@ -438,6 +438,12 @@ footer
 {
     padding-top: 90px;
     text-align: center;
+    padding-bottom: 26px;
+}
+
+#copyright h4
+{
+    font-size: 1.25rem;
 }
 
 .serviceCard

@@ -4,6 +4,7 @@
 const express = require('express');
 const path = require('path');
 const services = require('./static/Scripts/Services.js');
+const session = require('express-session');
 
 // Initialization
 const app = express();
@@ -11,6 +12,14 @@ const port = 80;
 
 // Serving static files
 app.use('/static', express.static(path.join(__dirname, 'static')));
+// Session 
+app.use(session(
+    {
+        secret: 'clinicFlow session 1321',
+        resave: false,
+        saveUninitialized: true
+    }
+));
 // URL encoding
 app.use(express.urlencoded({extended: true}));
 
@@ -42,16 +51,22 @@ app.get('/appointment', (req, res) =>
 app.post('/submit-appointment', (req, res) =>
 {
     // Read from the form
-    const email = req.body.email;
+    req.session.reademail = req.body.email;
 
-    res.redirect(`/success?email=${encodeURIComponent(email)}`);
+    res.redirect(`/success`);
 });
 
 // Success page display
 app.get('/success', (req, res) =>
 {
-    // Read from the URL
-    const email = req.query.email;
+    // Read from the session
+    const email = req.session.reademail;
+
+    // If email is not entered then ask to fill the form
+    if(!email)
+        return res.redirect('/appointment');
+    
+    delete req.session.reademail;
 
     res.status(200).render('success.pug', {mail: email});
 });

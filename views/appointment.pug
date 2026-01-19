@@ -14,7 +14,7 @@ block content
     section 
         h2.section_heading Appointment Booking
 
-        form#appointment_form(method="POST", action="/submit-appointment") 
+        form#appointment_form(method="POST", action="/submit-appointment", autocomplete="off") 
             label(for="name") Name: 
             span *
             input(type="text", id="name", placeholder="Enter you name" required)
