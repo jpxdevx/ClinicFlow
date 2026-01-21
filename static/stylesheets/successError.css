@@ -31,7 +31,7 @@ section
     color: var(--primary);
 }
 
-#message-holder img
+#success-icon
 {
     width: 100px;
     height: 100px;
@@ -47,4 +47,10 @@ section
 {
     font-weight: bold;
     text-decoration: underline;
+}
+
+#error-icon
+{
+    width: 120px;
+    height: 120px;
 }

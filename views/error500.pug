@@ -1,0 +1,16 @@
+//- Error file
+
+extends base.pug
+
+append title 
+    |  Error 
+
+append styles 
+    link(rel="stylesheet", href="../static/stylesheets/successError.css")
+
+block content 
+    section 
+        #message-holder 
+            img#error-icon(src="../static/Others/Error.png", alt="Error logo")
+            h3 Error!
+            p Something went wrong. Try again after some time...

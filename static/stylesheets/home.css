@@ -456,3 +456,47 @@ footer
 {
     transform: scale(1.1);
 }
+
+
+
+@media (min-width: 1025px) and (max-width: 1281px)
+{
+    #navigation li
+    {
+        text-align: center;
+    }
+}
+
+@media (min-width: 854px) and (max-width: 1024px) 
+{
+    #more
+    {
+        margin-left: 0;
+    }
+
+    #dashboard
+    {
+        width: 100%;
+    }
+
+    #nav_buttons
+    {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #navigation
+    {
+        width: 100%;
+    }
+
+    #navigation li
+    {
+        padding: 0px 50px;
+    } 
+
+    body
+    {
+        width: 116vw;
+    }
+}

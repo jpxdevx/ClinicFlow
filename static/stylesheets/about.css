@@ -74,3 +74,12 @@ aside
 {
     left: 373px;
 }
+
+
+@media (min-width: 412px)
+{
+    .edu-content-container
+    {
+        margin-bottom: 24px;
+    }
+}

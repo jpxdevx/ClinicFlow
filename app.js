@@ -1,10 +1,34 @@
 // Express app to serve the static files
 
 // Modules import
-const express = require('express');
-const path = require('path');
-const services = require('./static/Scripts/Services.js');
-const session = require('express-session');
+import express from 'express';
+import path from 'path';
+import services from './static/Scripts/Services.js';
+import session from 'express-session';
+import mongoose from 'mongoose';
+
+const __dirname = import.meta.dirname;
+
+// DB connection
+await mongoose.connect('mongodb://localhost/ClinicFlow', 
+    {
+        serverSelectionTimeoutMS: 15000
+    }
+);
+
+// Schema and modelling
+const appointmentSchema = new mongoose.Schema(
+    {
+        name: String,
+        email: String,
+        phone: Number,
+        age: Number,
+        date: String,
+        time: String
+    }
+);
+
+const appointment = mongoose.model('Appointment', appointmentSchema);
 
 // Initialization
 const app = express();
@@ -48,12 +72,21 @@ app.get('/appointment', (req, res) =>
 });
 
 // Appointment form submission
-app.post('/submit-appointment', (req, res) =>
+app.post('/submit-appointment', async (req, res, next) =>
 {
-    // Read from the form
-    req.session.reademail = req.body.email;
+    try
+    {
+        var readdata = new appointment(req.body);
+        await readdata.save();
 
-    res.redirect(`/success`);
+        req.session.reademail = req.body.email;
+        res.redirect(`/success`);
+    }
+
+    catch(error)
+    {
+        next(error);
+    }
 });
 
 // Success page display
@@ -64,7 +97,7 @@ app.get('/success', (req, res) =>
 
     // If email is not entered then ask to fill the form
     if(!email)
-        return res.redirect('/appointment');
+        return res.redirect('/error');
     
     delete req.session.reademail;
 
@@ -81,6 +114,18 @@ app.get('/contact', (req, res) =>
 app.get('/about', (req, res) =>
 {
     res.status(200).render('about.pug');
+});
+
+// Not found
+app.use((req, res) =>
+{
+    res.status(404).render('error404.pug');
+});
+
+// Internal server error
+app.use((err, req, res, next) =>
+{
+    res.status(500).render('error500.pug');
 });
 
 // Server

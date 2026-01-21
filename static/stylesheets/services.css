@@ -58,3 +58,62 @@
 {
     transform: scale(1.1);
 }
+
+
+
+@media (min-width: 1280px)
+{
+    .navigation_bar, footer
+    {
+        width: 105.15%;
+    }
+
+    body
+    {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 1024px)
+{
+    .navigation_bar, footer
+    {
+        width: 105.15%;
+    }
+
+    body
+    {
+        width: 125%;
+    }
+}
+
+@media (min-width: 412px)
+{
+    .navigation_bar, footer
+    {
+        width: 105.15%;
+    }
+
+    body
+    {
+        width: 131%;
+    }
+
+    html
+    {
+        height: 137.5%;
+    }
+
+    body 
+    {
+        min-height: 137.5vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section
+    {
+        flex: 1;
+    }
+}
