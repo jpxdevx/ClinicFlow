@@ -32,7 +32,7 @@ const appointment = mongoose.model('Appointment', appointmentSchema);
 
 // Initialization
 const app = express();
-const port = 80;
+const port = 3003;
 
 // Serving static files
 app.use('/static', express.static(path.join(__dirname, 'static')));

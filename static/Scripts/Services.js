@@ -10,4 +10,4 @@ const data = [
     {img: "./static/Services/Service9.jpg", heading: "Immunization", discription: "Protecting your family with routine vaccinations and travel-related flu shots."}
 ];
 
-module.exports = data
+export default data;
